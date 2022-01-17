@@ -1,0 +1,76 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+	char letter[1000]{};
+	int num[1000]{};
+	int option;
+	int counter = 0;
+	int counter2 = 0;
+	int letterAmount;
+	int numAmount;
+	int i = 1;
+
+	//Header of program
+	cout << "---------------------" << endl;
+	cout << "ASCII Convertor" << endl;
+	cout << "Made By Jake Robinson" << endl;
+	cout << "---------------------" << endl;
+	cout << "Text to ACSII : 1" << endl;
+	cout << "ACSII to Text : 2" << endl;
+	cout << "---------------------" << endl;
+	cout << endl;
+	cout << "---> ";
+	cin >> option;
+	cout << endl;
+
+	//Normal to ACSII
+	if (option == 1) {
+		cout << "Enter Amount Of Letters: ";
+		cin >> letterAmount;
+		cout << endl;
+
+
+		for (int i = 1; i <= letterAmount; i++) {
+			cout << "Enter Letter " << counter + 1 << ": ";
+			cin >> letter[counter];
+			counter++;
+
+			if (i == letterAmount) {
+				cout << "ACSII: ";
+				for (int i = 1; i <= letterAmount; i++) {
+					cout << int(letter[counter2]) << " ";
+					counter2++;
+				}
+			}
+		}
+	}
+
+	//ACSII to normal
+	else {
+		cout << "Enter Amount Of Numbers: ";
+		cin >> numAmount;
+		cout << endl;
+
+
+		for (int i = 1; i <= numAmount; i++) {
+			cout << "Enter Number " << counter + 1<< ": ";
+			cin >> num[counter];
+			counter++;
+
+			if (i == numAmount) {
+				cout << "Text: ";
+				for (int i = 1; i <= numAmount; i++) {
+					cout << char(num[counter2]);
+					counter2++;
+				}
+			}
+		}
+	}
+
+	//Removes junk text
+	system("pause>0");
+}
+
