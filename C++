@@ -1,11 +1,11 @@
 #include <iostream>
-#include <array>
+
 using namespace std;
 
 int main()
 {
-	char letter[1000]{};
-	int num[1000]{};
+	char letter[100];
+	int num[100];
 	int option;
 	int counter = 0;
 	int counter2 = 0;
@@ -14,13 +14,12 @@ int main()
 	int i = 1;
 
 	//Header of program
-	cout << "---------------------" << endl;
-	cout << "ASCII Convertor" << endl;
-	cout << "Made By Jake Robinson" << endl;
-	cout << "---------------------" << endl;
+	cout << "-----------------" << endl;
+	cout << " ASCII Convertor" << endl;
+	cout << "-----------------" << endl;
 	cout << "Text to ACSII : 1" << endl;
 	cout << "ACSII to Text : 2" << endl;
-	cout << "---------------------" << endl;
+	cout << "-----------------" << endl;
 	cout << endl;
 	cout << "---> ";
 	cin >> option;
@@ -69,8 +68,5 @@ int main()
 			}
 		}
 	}
-
-	//Removes junk text
-	system("pause>0");
+    return 0;
 }
-
