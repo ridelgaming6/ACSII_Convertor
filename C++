@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void simple_tokenizer(string s)
+{
+	stringstream ss(s);
+	string word;
+	while (ss >> word) {
+		cout << word << endl;
+	}
+}
+
 int main()
 {
 	char letter[100];
