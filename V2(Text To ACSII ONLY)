@@ -29,16 +29,16 @@ int main() {
     //Text To ASCII
     if(option == 1) {
         cout << "Enter Word: ";
-	cin >> word;
-	cout << endl;
-	wordLength = word.length();
-	letter = new char[wordLength];
-	strcpy(letter, word.c_str());
+	    cin >> word;
+	    cout << endl;
+	    wordLength = word.length();
+	    letter = new char[wordLength];
+	    strcpy(letter, word.c_str());
 
         cout << "ACSII: ";
-	for (int i = 1; i <= wordLength; i++) {
-		cout << int(letter[counter]) << " ";
-		counter++;
-	}
+	    for (int i = 1; i <= wordLength; i++) {
+		    cout << int(letter[counter]) << " ";
+		    counter++;
+	    }
     }
 }
