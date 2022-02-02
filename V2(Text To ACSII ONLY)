@@ -4,45 +4,41 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
+    
     string word;
+
+    int option;
+    int counter = 0;
     int wordLength;
-	char * letter;
-	int num[100];
-	int option;
-	int counter = 0;
-	int counter2 = 0;
-	int letterAmount;
-	int numAmount;
-	int i = 1;
 
-	//Header of program
-	cout << "-----------------" << endl;
-	cout << " ASCII Convertor" << endl;
-	cout << "-----------------" << endl;
-	cout << "Text to ACSII : 1" << endl;
-	cout << "ACSII to Text : 2" << endl;
-	cout << "-----------------" << endl;
-	cout << endl;
-	cout << "---> ";
-	cin >> option;
-	cout << endl;
+    char * letter;
 
-	//Normal to ACSII
-	if (option == 1) {
-		cout << "Enter Word: ";
-		cin >> word;
-		cout << endl;
-		wordLength = word.length();
-		letter = new char[wordLength];
-		strcpy(letter, word.c_str());
-		
-				cout << "ACSII: ";
-				for (int i = 1; i <= wordLength; i++) {
-					cout << int(letter[counter2]) << " ";
-					counter2++;
-				}
-			}
-		}
-	
+    //Program Header
+    cout << "-----------------" << endl;
+    cout << " ASCII Convertor " << endl;
+    cout << "-----------------" << endl;
+    cout << "Text to ACSII : 1" << endl;
+    cout << "ACSII to Text : 2" << endl;
+    cout << "-----------------" << endl;
+    cout << endl;
+    cout << "---> ";
+    cin >> option;
+    cout << endl;
+
+    //Text To ASCII
+    if(option == 1) {
+        cout << "Enter Word: ";
+	cin >> word;
+	cout << endl;
+	wordLength = word.length();
+	letter = new char[wordLength];
+	strcpy(letter, word.c_str());
+
+        cout << "ACSII: ";
+	for (int i = 1; i <= wordLength; i++) {
+		cout << int(letter[counter]) << " ";
+		counter++;
+	}
+    }
+}
