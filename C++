@@ -2,18 +2,11 @@
 
 using namespace std;
 
-void simple_tokenizer(string s)
-{
-	stringstream ss(s);
-	string word;
-	while (ss >> word) {
-		cout << word << endl;
-	}
-}
-
 int main()
 {
-	char letter[100];
+    string word;
+    int wordLength;
+	char * letter;
 	int num[100];
 	int option;
 	int counter = 0;
@@ -36,12 +29,14 @@ int main()
 
 	//Normal to ACSII
 	if (option == 1) {
-		cout << "Enter Amount Of Letters: ";
-		cin >> letterAmount;
-		cout << endl;
+		cout << "Enter Word: ";
+		cin >> word;
+		wordLength = word.length();
+		cout << wordLength << endl;
+		letter = new char[wordLength];
 
 
-		for (int i = 1; i <= letterAmount; i++) {
+		for (int i = 1; i <= wordLength; i++) {
 			cout << "Enter Letter " << counter + 1 << ": ";
 			cin >> letter[counter];
 			counter++;
